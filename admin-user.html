@@ -72,6 +72,92 @@
     <div class="admin-content">
 
 
+        <div class="am-cf am-padding">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">景点信息</strong> /
+                <small>Info</small>
+            </div>
+        </div>
+
+        <div class="am-g">
+            <div class="am-u-sm-12 am-u-md-6">
+                <div class="am-btn-toolbar">
+                    <div class="am-btn-group am-btn-group-xs">
+                        <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> <a href="admin-user.html">新增</a>
+                        </button>
+                        <!--<button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存-->
+                        <!--</button>-->
+                        <button type="button" class="am-btn am-btn-default" disabled="disabled"><span class="am-icon-archive"></span>编辑
+                        </button>
+                        <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-3">
+                <div class="am-form-group">
+                    <select data-am-selected="{btnSize: 'sm'}">
+                        <option value="option1">所有类别</option>
+                        <option value="option2">专家医院</option>
+                        <option value="option3">门诊医院</option>
+                    </select>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-3">
+                <div class="am-input-group am-input-group-sm">
+                    <input type="text" id= "search"class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button" onclick="searchView($(search).val())">搜索</button>
+          </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-g">
+            <div class="am-u-sm-12">
+                <form class="am-form">
+                    <table class="am-table am-table-striped am-table-hover table-main">
+                        <thead>
+                        <tr>
+                            <th class="table-check"><input type="checkbox"/></th>
+                            <th class="table-id">ID</th>
+                            <th class="table-title">医院名字</th>
+                            <th class="table-title">地址</th>
+                            <th class="table-title">联系电话</th>
+                            <th class="table-title">联系人</th>
+                            <th class="table-title">地址</th>
+                            <th class="table-title">等级</th>
+                            <th class="table-title">简介</th>
+                            <!--<th class="table-author am-hide-sm-only">介绍</th>-->
+                            <!--<th class="table-date am-hide-sm-only">修改日期</th>-->
+                            <th class="table-set" >操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="allDatas"></tbody>
+                    </table>
+                    <div class="am-cf" >
+                        <div  style="text-align: center">
+                            <ul id="page" data-am-widget="pagination" class="am-pagination am-pagination-default " style="margin: auto;text-align: center;" >
+                                <!--<li class="am-disabled"><a href="#">«</a></li>-->
+                                <!--<li class="am-active"><a href="#">1</a></li>-->
+                                <!--<li><a href="#">2</a></li>-->
+                                <!--<li><a> href="#">3</a></li>-->
+                                <!--<li><a href="#">4</a></li>-->
+                                <!--<li><a href="#">5</a></li>-->
+                                <!--<li><a href="#">»</a></li>-->
+                            </ul>
+                            <span>共<label id="total"></label>条记录</span>
+                        </div>
+
+
+                    </div>
+                    <hr/>
+                    <p>注：.....</p>
+                </form>
+            </div>
+
+        </div>
+
+
     </div>
     <!-- content end -->
 
